@@ -8,13 +8,6 @@
     <artifactId>figures</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-<!--    toString implement-->
-<!--    printPoints-->
-<!--    area-->
-
-<!--    verify tests to create convex quadrilaterals only-->
-<!--    verify tests to create existing triangles only-->
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
