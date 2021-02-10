@@ -106,7 +106,6 @@ public class QuadrilateralTest {
                 for (Point c : p3) {
                     for (Point d : p4) {
                         quadrilaterals.add(q(a, b, c, d));
-                        System.out.println(q(a, b, c, d).toString());
                     }
                 }
             }
