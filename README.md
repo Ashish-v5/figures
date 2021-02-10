@@ -47,6 +47,11 @@ Implement methods in `Triangle`, `Quadrilateral`, `Circle`:
         
     *Note*: you may use default implementation given in the `Figure` class, when it suits a case well.
 
+1. `public Point leftmostPoint()`\
+   Return a leftmost point of the figure: the one having the least `X` coordinate.\
+   If there are many leftmost points, return any of them. 
+   
+
 Hints:
 * [Degeneracy reference](https://en.wikipedia.org/wiki/Degeneracy_(mathematics))
 * [Convex quadrilateral reference](https://en.wikipedia.org/wiki/Quadrilateral#Convex_quadrilaterals)

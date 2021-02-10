@@ -43,6 +43,12 @@ public class QuadrilateralTest {
         assertEquals(expected, q.pointsToString(), "Error in pointsToString() on case " + q);
     }
 
+    @ParameterizedTest
+    @MethodSource("testLeftmostCases")
+    void testLeftmost(final Quadrilateral q, final double expected) {
+        assertEquals(expected, q.leftmostPoint().getX(), 0.0001, "Error in leftmostPoint() on case " + q);
+    }
+
     static Stream<Arguments> testAreaCases() throws IOException {
         Iterator<String> areas = Files.readAllLines(Paths.get("src/test/resources/quadrilateral-area.txt")).iterator();
         return quadrilaterals()
@@ -59,6 +65,12 @@ public class QuadrilateralTest {
         Iterator<String> areas = Files.readAllLines(Paths.get("src/test/resources/quadrilateral-points.txt")).iterator();
         return quadrilaterals()
                 .map(q -> Arguments.of(q, areas.next()));
+    }
+
+    static Stream<Arguments> testLeftmostCases() throws IOException {
+        Iterator<String> expected = Files.readAllLines(Paths.get("src/test/resources/quadrilateral-leftmost.txt")).iterator();
+        return quadrilaterals()
+                .map(q -> Arguments.of(q, parseDouble(expected.next())));
     }
 
     private static Stream<Quadrilateral> quadrilaterals() {

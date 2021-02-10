@@ -40,6 +40,13 @@ public class TriangleTest {
         assertEquals(expected, t.pointsToString(), "Error in pointsToString() on case " + t);
     }
 
+    @ParameterizedTest
+    @MethodSource("testLeftmostCases")
+    void testLeftmost(final double expected, final double ax, final double ay, final double bx, final double by, final double cx, final double cy) {
+        final Triangle t = t(ax, ay, bx, by, cx, cy);
+        assertEquals(expected, t.leftmostPoint().getX(), 0.0001, "Error in leftmostPoint() on case " + t);
+    }
+
     static Stream<Arguments> testAreaCases() {
         return Stream.of(
                 Arguments.of(6.00, 0, 0, 4, 0, 0, 3),
@@ -88,6 +95,23 @@ public class TriangleTest {
                 Arguments.of("(8.0,2.0)(3.0,7.0)(3.0,3.0)", 8, 2, 3, 7, 3, 3),
                 Arguments.of("(7.0,7.0)(4.0,0.0)(5.0,5.0)", 7, 7, 4, 0, 5, 5),
                 Arguments.of("(3.0,4.0)(8.0,2.0)(6.0,9.0)", 3, 4, 8, 2, 6, 9)
+        );
+    }
+
+    static Stream<Arguments> testLeftmostCases() {
+        return Stream.of(
+                Arguments.of(0, 0, 0, 4, 0, 0, 3),
+                Arguments.of(0, 0, 1, 0, 4, 3, 0),
+                Arguments.of(-5, 2, 5, -5, 4, 3, 0),
+                Arguments.of(-2, 8, 2, 1, 2, -2, -8),
+                Arguments.of(2, 4, 5, 2, 5, 3, -8),
+                Arguments.of(6, 9, 7, 6, 9, 7, -8),
+                Arguments.of(4, 4, 9, 4, 6, 9, -8),
+                Arguments.of(-3, 6, 3, 7, 3, -3, -7),
+                Arguments.of(3, 3, 5, 9, 3, 6, 5),
+                Arguments.of(3, 8, 2, 3, 7, 3, 3),
+                Arguments.of(4, 7, 7, 4, 0, 5, 5),
+                Arguments.of(3, 3, 4, 8, 2, 6, 9)
         );
     }
 
