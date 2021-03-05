@@ -1,7 +1,7 @@
 # Figures
 
-Given: class `Point`, abstract class `Figure`, 
-skeletons of classes `Triangle`, `Quadrilateral`, `Circle`.
+Given a class `Point`, an abstract class `Figure`, 
+skeletons of classes `Triangle`, `Quadrilateral`, `Circle`, implement the following.
 
 Make `Triangle`, `Quadrilateral`, `Circle` extend `Figure` class.
 
