@@ -56,7 +56,7 @@ Implement methods in `Triangle`, `Quadrilateral`, `Circle`:
    Return a leftmost point of the figure: the one having the least `X` coordinate.\
    If there are many leftmost points, return any of them. 
 
-[`Point`](src/main/java/com/epam/rd/autotasks/figures/Point.java)
+[`Point`](src/main/java/com/epam/rd/autotasks/figures/Point.java) class is already there.
 
 Hints:
 * [Degeneracy reference](https://en.wikipedia.org/wiki/Degeneracy_(mathematics))
