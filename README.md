@@ -15,7 +15,7 @@ Implement methods in `Triangle`, `Quadrilateral`, `Circle`:
 1. constructors with following parameters:
     * `Triangle` - three vertices (points) as parameters.
     * `Quadrilateral` - four vertices (points) as parameters.
-    * `Circle` - point of the center and double value of the radius.
+    * `Circle` - point of the center and `double` value of the radius.
    
     All the input datasets in tests are guaranteed to form a non-degenerative figures.
     For Quadrilaterals, it is guaranteed that all test datasets would form a convex quadrilaterals.
